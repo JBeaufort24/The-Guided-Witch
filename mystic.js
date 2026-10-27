@@ -34,7 +34,7 @@ function updateCartUI() {
   }
   
   container.innerHTML = cart.map(item => `
-                <div style="display: flex; align-items: center; justify-content: space-between; padding: 0.75rem; border-radius: 0.5rem; background-color: rgba(30, 41, 59, 0.6); border: 1px solid rgba(51, 65, 85, 0.6); font-size: 0.75rem;">
+                <div style="display: flex; align-items: center; justify-content: space-between; padding: 0.75rem; border-radius: 0.5rem; background-color: rgba(100, 41, 59, 1); border: 1px solid rgba(51, 65, 85, 1); font-size: 0.75rem;">
                     <div>
                         <h4 style="font-weight: 600; color: #fef08a;">${item.name}</h4>
                         <span style="color: var(--color-text-muted);">R${item.price} x ${item.qty}</span>
@@ -64,15 +64,15 @@ function checkoutWhatsApp() {
     return;
   }
   
-  let message = "Hello The Guided Witch! I would like to order the following spell oils:\n\n";
+  let message = "Hello Mystic Haven! I would like to order the following products:\n\n";
   cart.forEach(item => {
     message += `• ${item.name} (Qty: ${item.qty}) - R${item.price * item.qty}\n`;
   });
   const total = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
-  message += `\nTotal Amount: R${total} (Including SA Delivery)\n\nPlease provide payment details and delivery information request.`;
+  message += `\nTotal Amount: R${total} (Including SA Delivery)\n\nMR MT Marais\n2373636138\nSavings account\nCapitec bank\n\nPlease note if you do send the payment please make the description spiritual services`;
   
   const encoded = encodeURIComponent(message);
-  window.open(`https://wa.me/27000000000?text=${encoded}`, '_blank');
+  window.open(`https://wa.me/27840530859?text=${encoded}`, '_self');
 }
 
 // Tab Switching Functionality
