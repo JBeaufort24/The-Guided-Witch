@@ -71,8 +71,8 @@
 
         .glass-card {
             background: rgba(19, 36, 58, 0.55);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(212, 175, 55, 0.15);
         }
 
@@ -80,7 +80,7 @@
             transition: var(--transition-standard);
         }
         .glass-card-hover:hover {
-            border-color: rgba(212, 175, 55, 0.4);
+            border-color: rgba(220, 220, 220, 0.6);
             box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.2);
             transform: translateY(-3px);
         }
@@ -216,7 +216,7 @@
         }
 
         .nav-link {
-            color: #cbd5e1;
+            color: var(--color-text-main);
             text-decoration: none;
             display: flex;
             align-items: center;
@@ -639,8 +639,7 @@
             font-size: 1.125rem;
             transition: color 0.2s ease;
         }
-        .product-card:hover .product-title { color: #fef08a; }
-
+    
         .product-desc {
             font-size: 0.75rem;
             color: #cbd5e1;
