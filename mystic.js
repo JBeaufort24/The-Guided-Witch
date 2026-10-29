@@ -126,3 +126,14 @@ selectElement.addEventListener('change', (event) => {
     // Store this selection temporarily (e.g., in localStorage or state)
     localStorage.setItem('selectedService', selectedText);
 });
+
+
+// Example: Get the service selected by the user from a dropdown or radio button
+const selectedService = document.getElementById('service-select').value; // e.g., "Tarot Reading - R150"
+
+// Build the dynamic Google Calendar URL with the pre-filled custom info
+const encodedDetails = encodeURIComponent("Booked Service: " + selectedService);
+const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(selectedService)}&details=${encodedDetails}`;
+
+// Assign it to your button/link dynamically
+document.getElementById('gcal-link').href = calendarUrl;
