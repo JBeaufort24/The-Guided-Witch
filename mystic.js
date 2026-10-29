@@ -117,3 +117,12 @@ function handleFormSubmit(e) {
     msg.style.display = 'none';
   }, 6000);
 }
+
+const selectElement = document.querySelector('select'); // Target your dropdown
+selectElement.addEventListener('change', (event) => {
+    const selectedOption = event.target.value;
+    const selectedText = event.target.options[event.target.selectedIndex].text;
+
+    // Store this selection temporarily (e.g., in localStorage or state)
+    localStorage.setItem('selectedService', selectedText);
+});
