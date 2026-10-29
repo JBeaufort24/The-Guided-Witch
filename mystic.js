@@ -64,15 +64,25 @@ function checkoutWhatsApp() {
     return;
   }
   
-  let message = "Hello Mystic Haven! I would like to order the following products:\n\n";
+    let message = "Hello Mystic Haven! I would like to order the following products:\n\n";
+
   cart.forEach(item => {
     message += `• ${item.name} (Qty: ${item.qty}) - R${item.price * item.qty}\n`;
   });
+
   const total = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
-  message += `\nTotal Amount: R${total} (Including SA Delivery)\n\nMR MT Marais\n2373636138\nSavings account\nCapitec bank\n\nPlease note if you do send the payment please make the description spiritual services`;
   
+  message += `\nTotal Amount: R${total} (Including SA Delivery)\n\n`;
+  message += `Bank Details:\n`;
+  message += `Account Holder: MR MT Marais\n`;
+  message += `Account Number: 2373636138\n`;
+  message += `Account Type: Savings account\n`;
+  message += `Bank: Capitec Bank\n\n`;
+  message += `Please note: When sending payment, please make the reference description "spiritual services".`;
+
   const encoded = encodeURIComponent(message);
   window.open(`https://wa.me/27840530859?text=${encoded}`, '_self');
+
 }
 
 // Tab Switching Functionality
