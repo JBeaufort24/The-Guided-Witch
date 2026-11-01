@@ -137,3 +137,4 @@ const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE
 
 // Assign it to your button/link dynamically
 document.getElementById('gcal-link').href = calendarUrl;
+

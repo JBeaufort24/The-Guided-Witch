@@ -12,8 +12,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="/mystic.css">
+    <style>
+            </style>
 </head>
 <body>
+    <!-- WELCOME POLICY POP-UP MODAL -->
+    <div id="welcome-policy-modal" class="policy-modal-overlay">
+        <div class="policy-modal-card">
+            <div class="policy-modal-header">
+                <i class="fa-solid fa-moon text-witch-gold" style="font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+                <h3 style="font-family: var(--font-serif); font-weight: 700; color: #fef08a; font-size: 1.25rem;">Welcome to Mystic Haven</h3>
+                <p style="font-size: 0.75rem; color: #c084fc; margin-top: 0.25rem;">Please review our policies and terms before entering</p>
+            </div>
+            <div class="policy-modal-body">
+                <p>Welcome to Mystic Haven. We offer spiritual services - spellwork, readings, and handcrafted spell oils - to support and guide you on your path. All services and products are offered for spiritual, personal, and entertainment purposes only. They are not a substitute for professional medical, legal, or financial advice. Nothing we offer guarantees a specific outcome, and we make no promises of 100% results.</p>
+                
+                <h4>Terms & Payments</h4>
+                <p>By entering and booking or purchasing, you agree to our terms. Payment is made via bank transfer and work begins only after payment is received. Refunds are available before work starts, but no refunds or returns once work has commenced or for products (except damaged/faulty items).</p>
+
+                <h4>Ethics & Safety</h4>
+                <p>We do not cast on children or animals, and we do not perform animal sacrifice. Our spell oils are for external/skin use only (please patch-test first) and are not intended to diagnose, treat, cure, or prevent any medical condition.</p>
+
+                <h4>Privacy (POPIA)</h4>
+                <p>Your name, birth details, and reading/spell nature are strictly confidential, stored securely in line with South Africa's POPIA regulations.</p>
+            </div>
+            <div class="policy-modal-footer">
+                <button onclick="closeWelcomeModal()" class="btn-primary" style="width: 100%; justify-content: center; padding: 0.75rem; font-size: 0.875rem; text-transform: uppercase;">
+                    <i class="fa-solid fa-check" style="margin-right: 0.375rem;"></i> I Agree — OK & Enter Website
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Top Announcement Bar -->
     <div class="announcement-bar">
         <i class="fa-solid fa-sparkles"></i>
@@ -41,6 +71,7 @@
                 <a href="#reviews" class="nav-link"><i class="fa-solid fa-star" style="color: #fde047; font-size: 0.75rem;"></i> Reviews</a>
                 <a href="#booking" class="nav-link"><i class="fa-solid fa-calendar-check" style="color: #60a5fa; font-size: 0.75rem;"></i> Book Session</a>
                 <a href="#contact" class="nav-link"><i class="fa-solid fa-envelope" style="color: #fb7185; font-size: 0.75rem;"></i> Contact</a>
+                <a href="#policies" class="nav-link"><i class="fa-solid fa-scale-balanced" style="color: #38bdf8; font-size: 0.75rem;"></i> Policies</a>
             </nav>
             <!-- Social Links & Cart CTA -->
             <div class="header-actions">
@@ -73,6 +104,7 @@
             <a href="#reviews" onclick="toggleMobileMenu()"><i class="fa-solid fa-star" style="color: #fde047; margin-right: 0.5rem;"></i> Client Reviews</a>
             <a href="#booking" onclick="toggleMobileMenu()"><i class="fa-solid fa-calendar-check" style="color: #60a5fa; margin-right: 0.5rem;"></i> Book Appointment</a>
             <a href="#contact" onclick="toggleMobileMenu()"><i class="fa-solid fa-envelope" style="color: #fb7185; margin-right: 0.5rem;"></i> Contact & Queries</a>
+            <a href="#policies" onclick="toggleMobileMenu()"><i class="fa-solid fa-scale-balanced" style="color: #38bdf8; margin-right: 0.5rem;"></i> Terms & Policies</a>
         </div>
     </header>
 
@@ -193,8 +225,7 @@
             </div>
             <!-- Products Grid -->
             <div class="products-grid">
-                                 
-                <!-- Product 1: Let It Rain Money (Green Theme) -->
+                <!-- Product 1: Let It Rain Money -->
                 <div class="glass-card product-card border-green glass-card-hover">
                     <div class="product-media theme-green">
                         <div class="media-overlay"></div>
@@ -217,7 +248,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Product 2: 7 Rings of Protection (Dark Theme) -->
+                <!-- Product 2: 7 Rings of Protection -->
                 <div class="glass-card product-card border-dark glass-card-hover">
                     <div class="product-media theme-dark">
                         <div class="media-overlay"></div>
@@ -240,7 +271,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Product 3: Crimson Love Oil (Crimson Red Theme) -->
+                <!-- Product 3: Crimson Love Oil -->
                 <div class="glass-card product-card border-crimson glass-card-hover">
                     <div class="product-media theme-crimson">
                         <div class="media-overlay"></div>
@@ -263,7 +294,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Product 4: Stormfire Oil (Royal Blue Theme) -->
+                <!-- Product 4: Stormfire Oil -->
                 <div class="glass-card product-card border-blue glass-card-hover">
                     <div class="product-media theme-blue">
                         <div class="media-overlay"></div>
@@ -286,7 +317,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Product 5: Dream Weaver Oil (Electric/Cyan Theme) -->
+                <!-- Product 5: Dream Weaver Oil -->
                 <div class="glass-card product-card border-cyan glass-card-hover">
                     <div class="product-media theme-cyan">
                         <div class="media-overlay"></div>
@@ -327,7 +358,7 @@
             </div>
         </section>
 
-        <!-- SERVICES & PRICING MENU SECTION (TABS) -->
+        <!-- SERVICES & PRICING MENU SECTION -->
         <section id="services" class="section-padding container">
             <div class="section-header">
                 <span class="section-subtitle">Spiritual Offerings</span>
@@ -349,7 +380,6 @@
             <!-- TAB 1: DIVINATION & READINGS -->
             <div id="tab-divination" class="tab-content">
                 <div class="tab-divination-grid">
-                    <!-- Tarot Readings Card -->
                     <div class="glass-card service-card">
                         <div class="card-header-flex">
                             <div>
@@ -370,7 +400,6 @@
                             <i class="fa-solid fa-calendar"></i> Book Tarot Reading
                         </a>
                     </div>
-                    <!-- Wax Readings Card -->
                     <div class="glass-card service-card" style="display: flex; flex-direction: column; justify-content: space-between;">
                         <div>
                             <div class="card-header-flex">
@@ -424,7 +453,6 @@
                         <div class="service-item-grid"><span>Cord Cuttings</span><strong>R600</strong></div>
                         <div class="service-item-grid" style="grid-column: 1 / -1;"><span>Obsession Spells</span><strong>R800</strong></div>
                     </div>
-                    <!-- Custom Spells Banner -->
                     <div class="custom-spells-banner">
                         <h4 style="font-family: var(--font-serif); font-weight: 700; color: #fef08a; text-transform: uppercase; font-size: 0.875rem;">  Custom Spells Welcome  </h4>
                         <p style="font-size: 0.75rem; color: #cbd5e1; margin-top: 0.25rem;">Have a specific complex situation? Contact me for a customized spell casting assessment.</p>
@@ -445,7 +473,6 @@
                         <i class="fa-solid fa-skull-crossbones" style="color: #fb7185; font-size: 1.875rem;"></i>
                     </div>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-                        <!-- Wards & Curses List -->
                         <div>
                             <h4 style="font-family: var(--font-serif); font-weight: 600; color: #fef08a; font-size: 0.875rem; border-bottom: 1px solid #334155; padding-bottom: 0.25rem; margin-bottom: 0.75rem;">Major Wards & Hexes</h4>
                             <div class="service-item"><span>Baneful Protection Ward</span><strong>R400</strong></div>
@@ -454,56 +481,12 @@
                             <div class="service-item"><span>Hexes</span><strong>R300</strong></div>
                             <div class="service-item" style="border: none;"><span>Curses</span><strong style="font-family: var(--font-serif); color: #f43f5e;">R1000+</strong></div>
                         </div>
-                        <!-- Jar Additions List -->
                         <div>
                             <h4 style="font-family: var(--font-serif); font-weight: 600; color: #fef08a; font-size: 0.875rem; border-bottom: 1px solid #334155; padding-bottom: 0.25rem; margin-bottom: 0.75rem;">Jar Additions</h4>
                             <div class="service-item"><span>Add to Hell Jar</span><strong>R50</strong></div>
                             <div class="service-item"><span>Add to Jar of Insomnia</span><strong>R60</strong></div>
                             <div class="service-item"><span>Add to Anti Glamour Jar</span><strong>R50</strong></div>
                             <div class="service-item" style="border: none;"><span>Add to Jar of Rotting Blessings</span><strong>R50</strong></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- REVIEWS SECTION -->
-        <section id="reviews" class="section-padding container">
-            <div class="section-header">
-                <span class="section-subtitle" style="color: #fde047;">Client Testimonials</span>
-                <h2 class="section-title gold-glow">Client Experiences</h2>
-                <div class="divider-gold"></div>
-            </div>
-
-            <div style="max-width: 48rem; margin-left: auto; margin-right: auto;">
-                <div class="glass-card service-card glass-card-hover" style="border-color: rgba(250, 204, 21, 0.3); padding: 2rem;">
-                    <!-- 5 Star Rating -->
-                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; border-bottom: 1px solid rgba(51, 65, 85, 0.6); padding-bottom: 0.75rem;">
-                        <div style="color: #facc15; font-size: 1.125rem; display: flex; gap: 0.25rem;">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <span style="font-size: 0.75rem; color: #6ee7b7; font-weight: 600; background: rgba(6, 78, 59, 0.6); padding: 0.25rem 0.625rem; border-radius: 9999px; border: 1px solid rgba(16, 185, 129, 0.3);">
-                            Verified Client Review
-                        </span>
-                    </div>
-
-                    <!-- Review Text -->
-                    <blockquote style="font-size: 0.9375rem; color: #f1f5f9; line-height: 1.7; font-style: italic; font-weight: 300;">
-                        "I did an obsession and domination spell, and trust me, the experience was WORTH IT! 🩷✨ My partner has been so hooked, and I couldn’t be happier with my experience! Matt is an absolutely amazing spellcaster! He’s so friendly, loving, and trustworthy. What I appreciate most is how dedicated he is to his clients and how he takes the time to understand their needs. Honestly, it was worth the money, and I’m so glad I chose Matt! He is very approachable, supportive, and passionate about what he does and he has been wonderful to work with! 🩷🦋✨"
-                    </blockquote>
-
-                    <!-- Review Footer / Author -->
-                    <div style="margin-top: 1.25rem; display: flex; align-items: center; gap: 0.75rem;">
-                        <div style="width: 2.25rem; height: 2.25rem; border-radius: 50%; background: linear-gradient(135deg, #f43f5e, #be123c); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.875rem;">
-                            C
-                        </div>
-                        <div>
-                            <span style="display: block; font-weight: 600; font-size: 0.875rem; color: #fef08a;">Happy Client</span>
-                            <span style="font-size: 0.6875rem; color: var(--color-text-muted);">Obsession & Domination Spell</span>
                         </div>
                     </div>
                 </div>
@@ -522,11 +505,8 @@
             </div>
             <div class="glass-card service-card" style="max-width: 64rem; margin-left: auto; margin-right: auto;">
                 <div class="grid-booking">
-                                         
-                    <!-- Left Column: Step Guide & Info -->
                     <div class="booking-left-col">
                         <h3 style="font-family: var(--font-serif); font-weight: 700; font-size: 1.25rem; margin-bottom: 1rem;">Booking Steps</h3>
-                                                
                         <div class="booking-steps">
                             <div class="step-item">
                                 <div class="step-num">1</div>
@@ -556,7 +536,6 @@
                             <p style="margin-top: 0.5rem; font-size: 0.6875rem; color: var(--color-text-muted);">For urgent same-day readings, please reach out directly via WhatsApp.</p>
                         </div>
                     </div>
-                    <!-- Right Column: Interactive Google Calendar Embed Interface Container -->
                     <div>
                         <div class="booking-select-header">
                             <label for="booking-service-select" style="font-size: 0.75rem; font-weight: 600; color: #fef08a;">Select Reading / Service:</label>
@@ -575,7 +554,6 @@
                                 </optgroup>
                             </select>
                         </div>
-                        <!-- Embedded Google Calendar Booking Container -->
                         <div class="calendar-embed-container">
                             <div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 1.5rem; text-align: center;">
                                 <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #1e293b; padding-bottom: 0.75rem;">
@@ -608,12 +586,9 @@
                 <div class="divider-gold"></div>
             </div>
             <div class="grid-contact" style="max-width: 64rem; margin-left: auto; margin-right: auto;">
-                                 
-                <!-- Direct Social & WhatsApp Contacts -->
                 <div>
                     <div class="glass-card service-card" style="display: flex; flex-direction: column; gap: 1rem;">
                         <h3 style="font-family: var(--font-serif); font-weight: 700; font-size: 1.25rem; color: #fef08a;">Connect Directly</h3>
-                                                
                         <a href="https://wa.me/27840530859" target="_blank" class="contact-box" style="background-color: rgba(6, 78, 59, 0.4); border-color: rgba(16, 185, 129, 0.3);">
                             <div class="contact-box-icon" style="background-color: #059669;">
                                 <i class="fa-brands fa-whatsapp"></i>
@@ -652,11 +627,9 @@
                         </a>
                     </div>
                 </div>
-                <!-- Contact Form -->
                 <div>
                     <form id="contact-form" onsubmit="handleFormSubmit(event)" class="glass-card service-card">
                         <h3 style="font-family: var(--font-serif); font-weight: 700; font-size: 1.25rem; margin-bottom: 1rem;">Send a Message</h3>
-                                                
                         <div class="form-grid-2">
                             <div class="form-group">
                                 <label class="form-label">Your Name</label>
@@ -690,12 +663,48 @@
                 </div>
             </div>
         </section>
+
+        <!-- POLICIES & TERMS SECTION (FOOTER INCORPORATED) -->
+        <section id="policies" class="section-padding container" style="border-top: 1px solid rgba(212, 175, 55, 0.2); margin-top: 2rem;">
+            <div class="section-header">
+                <span class="section-subtitle" style="color: #38bdf8;">Official Guidelines</span>
+                <h2 class="section-title gold-glow">Terms, Policies & Safety</h2>
+                <div class="divider-gold"></div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 64rem; margin-left: auto; margin-right: auto; font-size: 0.8125rem; color: #cbd5e1; line-height: 1.7;">
+                <!-- Terms & Disclaimer -->
+                <div class="glass-card service-card">
+                    <h3 style="font-family: var(--font-serif); font-weight: 700; color: #fef08a; font-size: 1.125rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fa-solid fa-file-contract" style="color: var(--color-witch-gold);"></i> Terms & Disclaimer
+                    </h3>
+                    <p>Welcome to Mystic Haven. All services and products (spellwork, readings, and handcrafted oils) are offered for spiritual, personal, and entertainment purposes only. They are not a substitute for professional medical, legal, or financial advice. No outcomes or 100% results are guaranteed. Booking a service or purchasing a product constitutes agreement to these terms.</p>
+                    <p style="margin-top: 0.5rem;"><strong>Payments & Refunds:</strong> Payment is via bank transfer (due the day before or day of booking; work only begins upon receipt). Refunds are available before work starts, but no refunds once work has commenced or for products unless damaged/faulty. Cancellation fees apply for day-of cancellations.</p>
+                </div>
+                <!-- Ethics & Spell Oil Safety -->
+                <div class="glass-card service-card">
+                    <h3 style="font-family: var(--font-serif); font-weight: 700; color: #fef08a; font-size: 1.125rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fa-solid fa-shield-heart" style="color: #34d399;"></i> Ethics & Oil Safety
+                    </h3>
+                    <p><strong>Ethics Policy:</strong> We do not cast on children or animals, and we do not perform animal sacrifice. We reserve the right to decline any request falling outside our ethics.</p>
+                    <p style="margin-top: 0.5rem;"><strong>Spell Oils Safety:</strong> For external/skin use only, not internal use unless explicitly stated. Always perform a patch test before use; discontinue if irritation occurs. Oils do not diagnose, treat, cure, or prevent any condition.</p>
+                </div>
+                <!-- Privacy & Shipping -->
+                <div class="glass-card service-card" style="grid-column: 1 / -1;">
+                    <h3 style="font-family: var(--font-serif); font-weight: 700; color: #fef08a; font-size: 1.125rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fa-solid fa-lock" style="color: #60a5fa;"></i> Privacy (POPIA) & Shipping
+                    </h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem;">
+                        <p><strong>Privacy & Confidentiality:</strong> All client information (names, birth details, reading or spell nature) is strictly confidential, stored securely in a locked folder on our phone, and never shared. Compliant with South Africa's Protection of Personal Information Act (POPIA).</p>
+                        <p><strong>Shipping & Delivery:</strong> Local pickup available. Spell oils ship nationwide with tracking updates until delivery confirmation. Results for readings are delivered in-person, online via voice/video call, and spellwork/oils include photo/video proof of casting and packaging.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- FOOTER SECTION -->
     <footer class="site-footer">
         <div class="container footer-flex">
-                         
             <div style="display: flex; align-items: center; gap: 0.75rem;">
                 <div class="logo-icon-bg" style="width: 2rem; height: 2rem;">
                     <i class="fa-solid fa-moon text-witch-gold" style="font-size: 0.75rem;"></i>
@@ -710,7 +719,7 @@
                 <a href="https://wa.me/27840530859" target="_blank" style="color: inherit; text-decoration: none;" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
             <div style="text-align: center; font-size: 0.6875rem;">
-                <p>  Mystic Haven    All Rights Reserved.</p>
+                <p>  Mystic Haven - All Rights Reserved.</p>
                 <p style="color: var(--color-text-dim); margin-top: 0.125rem;">Spiritual products intended for spiritual & ritual usage.</p>
             </div>
         </div>
