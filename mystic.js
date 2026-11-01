@@ -138,3 +138,17 @@ const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE
 // Assign it to your button/link dynamically
 document.getElementById('gcal-link').href = calendarUrl;
 
+// Welcome Policy Modal Script
+function closeWelcomeModal() {
+  const modal = document.getElementById('welcome-policy-modal');
+  modal.classList.add('hidden');
+  // Optional: store acceptance in localStorage so it doesn't pop up on every single click/refresh during session
+  localStorage.setItem('mystic_policy_accepted', 'true');
+}
+
+// Check if already accepted on load
+window.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('mystic_policy_accepted') === 'true') {
+    document.getElementById('welcome-policy-modal').classList.add('hidden');
+  }
+});
