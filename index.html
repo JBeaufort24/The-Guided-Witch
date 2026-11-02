@@ -490,41 +490,41 @@
         </section>
 
         <!-- REVIEWS SECTION -->
-        <section id="reviews" class="section-padding container">
-            <div class="section-header">
-                <span class="section-subtitle" style="color: #fde047;">Client Testimonials</span>
-                <h2 class="section-title gold-glow">Client Experiences</h2>
-                <div class="divider-gold"></div>
+        <section class="reviews-section" id="review">
+      <h1 class="review-header">Client Reviews & Testimonials</h1>
+      <div class="carousel-container">
+        <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Previous Review">&#10094;</button>
+        <button class="carousel-btn next-btn" id="nextBtn" aria-label="Next Review">&#10095;</button>
+        
+        <div class="carousel-track-container">
+          <div class="carousel-track" id="carouselTrack">
+            <div class="review-card">
+              <div class="stars">★★★★</div>
+              <p class="review-text">"The service Matt gives is amazing, he keeps in contact with his clients and maintains amazing friendships! Highly recommend this diva witch"</p>
+              <h4 class="client-name">Anonymous</h4>
+              <span class="project-type"></span>
             </div>
-            <div style="max-width: 48rem; margin-left: auto; margin-right: auto;">
-                <div class="glass-card service-card glass-card-hover" style="border-color: rgba(250, 204, 21, 0.3); padding: 2rem;">
-                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; border-bottom: 1px solid rgba(51, 65, 85, 0.6); padding-bottom: 0.75rem;">
-                        <div style="color: #facc15; font-size: 1.125rem; display: flex; gap: 0.25rem;">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <span style="font-size: 0.75rem; color: #6ee7b7; font-weight: 600; background: rgba(6, 78, 59, 0.6); padding: 0.25rem 0.625rem; border-radius: 9999px; border: 1px solid rgba(16, 185, 129, 0.3);">
-                            Verified Client Review
-                        </span>
-                    </div>
-                    <blockquote style="font-size: 0.9375rem; color: #f1f5f9; line-height: 1.7; font-style: italic; font-weight: 300;">
-                        "I did an obsession and domination spell, and trust me, the experience was WORTH IT! 🩷✨ My partner has been so hooked, and I couldn’t be happier with my experience! Matt is an absolutely amazing spellcaster! He’s so friendly, loving, and trustworthy. What I appreciate most is how dedicated he is to his clients and how he takes the time to understand their needs. Honestly, it was worth the money, and I’m so glad I chose Matt! He is very approachable, supportive, and passionate about what he does and he has been wonderful to work with! 🩷🦋✨"
-                    </blockquote>
-                    <div style="margin-top: 1.25rem; display: flex; align-items: center; gap: 0.75rem;">
-                        <div style="width: 2.25rem; height: 2.25rem; border-radius: 50%; background: linear-gradient(135deg, #f43f5e, #be123c); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 0.875rem;">
-                            C
-                        </div>
-                        <div>
-                            <span style="display: block; font-weight: 600; font-size: 0.875rem; color: #fef08a;">Happy Client</span>
-                            <span style="font-size: 0.6875rem; color: var(--color-text-muted);">Obsession & Domination Spell</span>
-                        </div>
-                    </div>
-                </div>
+            
+            <div class="review-card">
+              <div class="stars">★★★★★</div>
+              <p class="review-text">"I did an obsession and domination spell, and trust me, the experience was WORTH IT! 🩷✨ My partner has been so hooked, and I couldn’t be happier with my experience! Matt is an absolutely amazing spellcaster! He’s so friendly, loving, and trustworthy. What I appreciate most is how dedicated he is to his clients and how he takes the time to understand their needs.Honestly, it was worth the money, and I’m so glad I chose Matt! He is very approachable, supportive, and passionate about what he does and he has been wonderful to work with! 🩷🦋✨"</p>
+              <h4 class="client-name">Anonymous</h4>
+              <span class="project-type">Obsession and Domination spell</span>
             </div>
-        </section>
+            
+            <div class="review-card">
+              <div class="stars">★★★★★</div>
+              <p class="review-text">"I contacted Matt for a 10 min reading, all I can say is I now have the only person I will trust telling me the truth about myself. After my reading with Matt, I recieved so much clarity about so many of the unknown of my life. Thank you Matt"</p>
+              <h4 class="client-name">JP Beaufort</h4>
+              <span class="project-type">10 Min Tarot Reding</span>
+            </div>
+
+    
+          </div>
+        </div>
+      </div>
+    </section>
+
 
         <!-- APPOINTMENT BOOKING SECTION -->
         <section id="booking" class="section-padding container">
@@ -793,9 +793,7 @@
     </a>
 
     <!-- JAVASCRIPT LOGIC -->
-    <script src="/mystic.js"></script>
-    <script>
-        
-    </script>
+    <script src="/mystic-javascript/mystic.js"></script>
+    <script src="/mystic-javascript/carousel-effect.js"></script>
 </body>
 </html>
