@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystic Haven - Services and Products</title>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/mystic.css">
+</head>
+
+<body>
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <i class="fa-solid fa-sparkles"></i>
+        <span>Nationwide Shipping Across South Africa   Flat R250 per Spell Oil | Bulk Order Discounts Available!</span>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="site-header glass-card">
+        <div class="container nav-wrapper">
+            <!-- Brand Logo / Title -->
+            <a href="/index.html" class="brand-logo">
+                <div class="logo-icon-bg">
+                    <img src="/mystic-images/mystic-haven-logo.jpg" alt="Mystic Haven Logo">
+                </div>
+                <div>
+                    <span class="brand-title gradient-text-gold gold-glow">Mystic Haven</span>
+                    <span class="brand-subtitle">Spells   Divination   Ritual Oils</span>
+                </div>
+            </a>
+            <!-- Desktop Nav Links -->
+            <nav class="nav-links">
+                <a href="/mystic-haven-pages/about.html" class="nav-link"><i class="fa-solid fa-user-astronaut" style="color: #c084fc; font-size: 0.75rem;"></i> About</a>
+                <a href="/mystic-haven-pages/services-products.html" class="nav-link"><i class="fa-solid fa-wand-magic-sparkles" style="color: #facc15; font-size: 0.75rem;"></i> Services</a>
+                <a href="/mystic-haven-pages/oils-potions.html" class="nav-link"><i class="fa-solid fa-flask" style="color: #34d399; font-size: 0.75rem;"></i> Oils</a>
+                <a href="https://calendar.app.google/drTGrNMuSD19UMKu9" target="_blank" class="nav-link"><i class="fa-solid fa-calendar-check" style="color: #60a5fa; font-size: 0.75rem;"></i> Bookings</a>
+                <a href="#contact" class="nav-link"><i class="fa-solid fa-envelope" style="color: #fb7185; font-size: 0.75rem;"></i> Contact</a>
+                
+            </nav>
+            <!-- Social Links & Cart CTA -->
+            <div class="header-actions">
+                <!-- Social Media Icons -->
+                <div class="social-group">
+                    <a href="https://tr.ee/vb8ZVpxIJ_" target="_blank" rel="noopener" class="social-icon-btn tiktok" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://tr.ee/nnQXEviwOc" target="_blank" rel="noopener" class="social-icon-btn instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://tr.ee/_b7haSmW_g" target="_blank" rel="noopener" class="social-icon-btn facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+                <!-- WhatsApp Quick Button -->
+                <a href="https://wa.me/27840530859?text=Hello%20Mystic%20Haven,%20I%20would%20like%20to%20inquire%20about%20your%20services" target="_blank" rel="noopener" class="btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <!-- Mobile Navigation Menu Toggle -->
+                <button onclick="toggleMobileMenu()" class="mobile-toggle">
+                    <i class="fa-solid fa-bars" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="mobile-dropdown container">
+            <a href="/mystic-haven-pages/about.html" onclick="toggleMobileMenu()"><i class="fa-solid fa-user-astronaut" style="color: #c084fc; margin-right: 0.5rem;"></i> About Us</a>
+            <a href="/mystic-haven-pages/services-products.html" onclick="toggleMobileMenu()"><i class="fa-solid fa-wand-magic-sparkles" style="color: #facc15; margin-right: 0.5rem;"></i> Services & Pricing</a>
+            <a href="/mystic-haven-pages/oils-potions.html" onclick="toggleMobileMenu()"><i class="fa-solid fa-flask" style="color: #34d399; margin-right: 0.5rem;"></i> Oils & Potions</a>
+            <a href="#review" onclick="toggleMobileMenu()"><i class="fa-solid fa-calendar-check" style="color: #0891b2; margin-right: 0.5rem;"></i> Reviews</a>
+            <a href="https://calendar.app.google/drTGrNMuSD19UMKu9" target="_blank" onclick="toggleMobileMenu()"><i class="fa-solid fa-calendar-check" style="color: #60a5fa; margin-right: 0.5rem;"></i> Book Appointment</a>
+            <a href="#contact" onclick="toggleMobileMenu()"><i class="fa-solid fa-envelope" style="color: #fb7185; margin-right: 0.5rem;"></i> Contact & Queries</a>
+        </div>
+    </header>
+
+  
+  <section id="services" class="section-padding container">
+            <div class="section-header">
+                <span class="section-subtitle">Spiritual Offerings</span>
+                <h2 class="section-title gold-glow">Services & Pricelist</h2>
+                <div class="divider-gold"></div>
+            </div>
+            <!-- Service Category Navigation Tabs -->
+            <div class="tabs-nav">
+                <button onclick="switchTab('divination')" id="tab-btn-divination" class="tab-btn active">
+                    <i class="fa-solid fa-cards-blank" style="margin-right: 0.375rem;"></i> Divination
+                </button>
+                <button onclick="switchTab('spells')" id="tab-btn-spells" class="tab-btn">
+                    <i class="fa-solid fa-wand-magic-sparkles" style="margin-right: 0.375rem;"></i> Spells
+                </button>
+                <button onclick="switchTab('baneful')" id="tab-btn-baneful" class="tab-btn">
+                    <i class="fa-solid fa-skull" style="margin-right: 0.375rem;"></i> Baneful Workings
+                </button>
+            </div>
+            <!-- TAB 1: DIVINATION & READINGS -->
+            <div id="tab-divination" class="tab-content">
+                <div class="tab-divination-grid">
+                    <div class="glass-card service-card">
+                        <div class="card-header-flex">
+                            <div>
+                                <h3 style="font-family: var(--font-serif); font-weight: 700; font-size: 1.25rem; color: #fef08a;">Tarot Readings</h3>
+                                <p style="font-size: 0.75rem; color: var(--color-text-muted);">Insightful card spreads for clarity & guidance</p>
+                            </div>
+                            <i class="fa-solid fa-cards-blank" style="color: var(--color-witch-gold); font-size: 1.5rem;"></i>
+                        </div>
+                        <ul class="service-list">
+                            <li class="service-item"><span>5 min Reading</span><strong>R50</strong></li>
+                            <li class="service-item"><span>10 min Reading</span><strong>R100</strong></li>
+                            <li class="service-item"><span>30 min Reading</span><strong>R150</strong></li>
+                            <li class="service-item"><span>1 Hour Reading</span><strong>R200</strong></li>
+                            <li class="service-item"><span>1 Hour & 30 min Reading</span><strong>R250</strong></li>
+                            <li class="service-item"><span>2 Hour Reading</span><strong>R300</strong></li>
+                        </ul>
+                        <a href="#booking" class="btn-secondary" style="margin-top: 1.5rem; font-size: 0.75rem; padding: 0.625rem;">
+                            <i class="fa-solid fa-calendar"></i> Book Tarot Reading
+                        </a>
+                    </div>
+                    <div class="glass-card service-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <div class="card-header-flex">
+                                <div>
+                                    <h3 style="font-family: var(--font-serif); font-weight: 700; font-size: 1.25rem; color: #fef08a;">Wax Readings</h3>
+                                    <p style="font-size: 0.75rem; color: var(--color-text-muted);">Ceromancy readings based on wax formations</p>
+                                </div>
+                                <i class="fa-solid fa-candle-holder" style="color: #facc15; font-size: 1.5rem;"></i>
+                            </div>
+                            <ul class="service-list">
+                                <li class="service-item" style="padding: 0.75rem 0;">
+                                    <div>
+                                        <span style="display: block; font-weight: 500;">Standard Wax Reading</span>
+                                        <span style="font-size: 0.75rem; color: var(--color-text-muted);">Core energetic diagnosis</span>
+                                    </div>
+                                    <strong>R200</strong>
+                                </li>
+                                <li class="service-item" style="padding: 0.75rem 0; border: none;">
+                                    <div>
+                                        <span style="display: block; font-weight: 500;">In-depth Wax Reading</span>
+                                        <span style="font-size: 0.75rem; color: var(--color-text-muted);">Comprehensive spiritual assessment</span>
+                                    </div>
+                                    <strong>R400</strong>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#booking" class="btn-secondary" style="margin-top: 1rem; font-size: 0.75rem; padding: 0.625rem;">
+                            <i class="fa-solid fa-calendar"></i> Book Wax Reading
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- TAB 2: SPELLS & ENERGY WORK -->
+            <div id="tab-spells" class="tab-content hidden" style="max-width: 56rem; margin-left: auto; margin-right: auto;">
+                <div class="glass-card service-card">
+                    <div class="card-header-flex">
+                        <div>
+                            <h3 style="font-family: var(--font-serif); font-weight: 700; font-size: 1.5rem; color: #fef08a;">Spells & Energy Rituals</h3>
+                            <p style="font-size: 0.75rem; color: var(--color-text-muted);">Potent spellcraft conducted with tailored intentions</p>
+                        </div>
+                        <i class="fa-solid fa-wand-magic-sparkles" style="color: var(--color-witch-gold); font-size: 1.875rem;"></i>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; font-size: 0.875rem;">
+                        <div class="service-item-grid"><span>Reconciliation Spell</span><strong>R250</strong></div>
+                        <div class="service-item-grid"><span>Let It Rain Money Spell</span><strong>R340</strong></div>
+                        <div class="service-item-grid"><span>7 Rings of Protection</span><strong>R500</strong></div>
+                        <div class="service-item-grid"><span>Self Love Spell</span><strong>R240</strong></div>
+                        <div class="service-item-grid"><span>Lucky Diva</span><strong>R300</strong></div>
+                        <div class="service-item-grid"><span>Aura Cleansing</span><strong>R500</strong></div>
+                        <div class="service-item-grid"><span>Aura Protection</span><strong>R550</strong></div>
+                        <div class="service-item-grid"><span>Cord Cuttings</span><strong>R600</strong></div>
+                        <div class="service-item-grid" style="grid-column: 1 / -1;"><span>Obsession Spells</span><strong>R800</strong></div>
+                    </div>
+                    <div class="custom-spells-banner">
+                        <h4 style="font-family: var(--font-serif); font-weight: 700; color: #fef08a; text-transform: uppercase; font-size: 0.875rem;">  Custom Spells Welcome  </h4>
+                        <p style="font-size: 0.75rem; color: #cbd5e1; margin-top: 0.25rem;">Have a specific complex situation? Contact me for a customized spell casting assessment.</p>
+                        <a href="https://wa.me/27840530859?text=Hello,%20I'd%20like%20to%20discuss%20a%20Custom%20Spell%20working." target="_blank" class="btn-primary" style="display: inline-flex; width: auto; margin-top: 0.75rem; padding: 0.5rem 1rem; font-size: 0.75rem;">
+                            Inquire for Custom Spell
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- TAB 3: BANEFUL WORKINGS & JARS -->
+            <div id="tab-baneful" class="tab-content hidden" style="max-width: 56rem; margin-left: auto; margin-right: auto;">
+                <div class="glass-card service-card" style="border-color: rgba(159, 18, 57, 0.4);">
+                    <div class="card-header-flex">
+                        <div>
+                            <h3 style="font-family: var(--font-serif); font-weight: 700; font-size: 1.5rem; color: #fda4af;">Baneful Workings & Jars</h3>
+                            <p style="font-size: 0.75rem; color: var(--color-text-muted);">Defensive, binding & retaliatory spiritual operations</p>
+                        </div>
+                        <i class="fa-solid fa-skull-crossbones" style="color: #fb7185; font-size: 1.875rem;"></i>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                        <div>
+                            <h4 style="font-family: var(--font-serif); font-weight: 600; color: #fef08a; font-size: 0.875rem; border-bottom: 1px solid #334155; padding-bottom: 0.25rem; margin-bottom: 0.75rem;">Major Wards & Hexes</h4>
+                            <div class="service-item"><span>Baneful Protection Ward</span><strong>R400</strong></div>
+                            <div class="service-item"><span>Anti-Division Ward</span><strong>R300</strong></div>
+                            <div class="service-item"><span>Transmutation Ward</span><strong>R700</strong></div>
+                            <div class="service-item"><span>Hexes</span><strong>R300</strong></div>
+                            <div class="service-item" style="border: none;"><span>Curses</span><strong style="font-family: var(--font-serif); color: #f43f5e;">R1000+</strong></div>
+                        </div>
+                        <div>
+                            <h4 style="font-family: var(--font-serif); font-weight: 600; color: #fef08a; font-size: 0.875rem; border-bottom: 1px solid #334155; padding-bottom: 0.25rem; margin-bottom: 0.75rem;">Jar Additions</h4>
+                            <div class="service-item"><span>Add to Hell Jar</span><strong>R50</strong></div>
+                            <div class="service-item"><span>Add to Jar of Insomnia</span><strong>R60</strong></div>
+                            <div class="service-item"><span>Add to Anti Glamour Jar</span><strong>R50</strong></div>
+                            <div class="service-item" style="border: none;"><span>Add to Jar of Rotting Blessings</span><strong>R50</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CONTACT & QUERY FORM SECTION -->
+        <section id="contact" class="section-padding container">
+            <div class="section-header">
+                <span class="section-subtitle" style="color: #fb7185;">Get In Touch</span>
+                <h2 class="section-title gold-glow">Contact & Queries</h2>
+                <div class="divider-gold"></div>
+            </div>
+            <div class="grid-contact" style="max-width: 64rem; margin-left: auto; margin-right: auto;">
+                <div>
+                    <div class="glass-card service-card" style="display: flex; flex-direction: column; gap: 1rem;">
+                        <h3 style="font-family: var(--font-serif); font-weight: 700; font-size: 1.25rem; color: #fef08a;">Connect Directly</h3>
+                        <a href="https://wa.me/27840530859" target="_blank" class="contact-box" style="background-color: rgba(6, 78, 59, 0.4); border-color: rgba(16, 185, 129, 0.3);">
+                            <div class="contact-box-icon" style="background-color: #059669;">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 0.75rem; font-weight: 600; color: #e2e8f0;">WhatsApp Chat</h4>
+                                <p style="font-size: 0.6875rem; color: var(--color-text-muted);">Fastest response for queries & custom quotes</p>
+                            </div>
+                        </a>
+                        <a href="https://tr.ee/vb8ZVpxIJ_" target="_blank" class="contact-box">
+                            <div class="contact-box-icon" style="background-color: #000000;">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 0.75rem; font-weight: 600; color: #e2e8f0;">TikTok</h4>
+                                <p style="font-size: 0.6875rem; color: var(--color-text-muted);">Watch ritual clips, readings & updates</p>
+                            </div>
+                        </a>
+                        <a href="https://tr.ee/nnQXEviwOc" target="_blank" class="contact-box">
+                            <div class="contact-box-icon" style="background: linear-gradient(to top right, #f59e0b, #f43f5e, #9333ea);">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 0.75rem; font-weight: 600; color: #e2e8f0;">Instagram</h4>
+                                <p style="font-size: 0.6875rem; color: var(--color-text-muted);">Follow behind-the-scenes workings</p>
+                            </div>
+                        </a>
+                        <a href="https://tr.ee/_b7haSmW_g" target="_blank" class="contact-box">
+                            <div class="contact-box-icon" style="background-color: #2563eb;">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 0.75rem; font-weight: 600; color: #e2e8f0;">Facebook Page</h4>
+                                <p style="font-size: 0.6875rem; color: var(--color-text-muted);">Join our spiritual community</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="glass-card service-card">
+                        <h3 style="font-family: var(--font-serif); font-weight: 700; font-size: 1.25rem; margin-bottom: 1rem;">Send a Message</h3>
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label class="form-label">Your Name</label>
+                                <input type="text" required placeholder="e.g. Mystic Haven" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" required placeholder="e.g. mystic@example.com" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Subject / Query Regarding</label>
+                            <select class="form-control">
+                                <option>General Inquiry</option>
+                                <option>Spell Oil Purchase & Combined Shipping</option>
+                                <option>Custom Spell Request</option>
+                                <option>Reading Clarification</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Your Message</label>
+                            <textarea rows="4" required placeholder="Describe your query or situation in detail..." class="form-control" style="resize: none;"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="text-transform: uppercase;">
+                            Send Query <i class="fa-solid fa-paper-plane" style="margin-left: 0.25rem;"></i>
+                        </button>
+                        <div id="form-success-msg" style="display: none; margin-top: 1rem; padding: 0.75rem; border-radius: 0.5rem; background-color: rgba(6, 78, 59, 0.8); border: 1px solid rgba(16, 185, 129, 0.5); color: #6ee7b7; font-size: 0.75rem; text-align: center; font-weight: 500;">
+                            <i class="fa-solid fa-circle-check" style="margin-right: 0.25rem;"></i> Thank you! Your message has been sent. Mystic Haven will get back to you shortly.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <!-- POLICIES & TERMS SECTION (FOOTER INCORPORATED) -->
+        <section id="policies" class="section-padding container" style="border-top: 1px solid rgba(212, 175, 55, 0.2); margin-top: 2rem;">
+            <div class="section-header">
+                <span class="section-subtitle" style="color: #38bdf8;">Official Guidelines</span>
+                <h2 class="section-title gold-glow">Terms, Policies & Safety</h2>
+                <div class="divider-gold"></div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 64rem; margin-left: auto; margin-right: auto; font-size: 0.8125rem; color: #cbd5e1; line-height: 1.7;">
+                <!-- Terms & Disclaimer -->
+                <div class="glass-card service-card">
+                    <h3 style="font-family: var(--font-serif); font-weight: 700; color: #fef08a; font-size: 1.125rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fa-solid fa-file-contract" style="color: var(--color-witch-gold);"></i> Terms & Disclaimer
+                    </h3>
+                    <p>Welcome to Mystic Haven. All services and products (spellwork, readings, and handcrafted oils) are offered for spiritual, personal, and entertainment purposes only. They are not a substitute for professional medical, legal, or financial advice. No outcomes or 100% results are guaranteed. Booking a service or purchasing a product constitutes agreement to these terms.</p>
+                    <p style="margin-top: 0.5rem;"><strong>Payments & Refunds:</strong> Payment is via bank transfer (due the day before or day of booking; work only begins upon receipt). Refunds are available before work starts, but no refunds once work has commenced or for products unless damaged/faulty. Cancellation fees apply for day-of cancellations.</p>
+                </div>
+                <!-- Ethics & Spell Oil Safety -->
+                <div class="glass-card service-card">
+                    <h3 style="font-family: var(--font-serif); font-weight: 700; color: #fef08a; font-size: 1.125rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fa-solid fa-shield-heart" style="color: #34d399;"></i> Ethics & Oil Safety
+                    </h3>
+                    <p><strong>Ethics Policy:</strong> We do not cast on children or animals, and we do not perform animal sacrifice. We reserve the right to decline any request falling outside our ethics.</p>
+                    <p style="margin-top: 0.5rem;"><strong>Spell Oils Safety:</strong> For external/skin use only, not internal use unless explicitly stated. Always perform a patch test before use; discontinue if irritation occurs. Oils do not diagnose, treat, cure, or prevent any condition.</p>
+                </div>
+                <!-- Privacy & Shipping -->
+                <div class="glass-card service-card">
+                    <h3 style="font-family: var(--font-serif); font-weight: 700; color: #fef08a; font-size: 1.125rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fa-solid fa-lock" style="color: #60a5fa;"></i> Privacy (POPIA) & Shipping
+                    </h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem;">
+                        <p><strong>Privacy & Confidentiality:</strong> All client information (names, birth details, reading or spell nature) is strictly confidential, stored securely in a locked folder on our phone, and never shared. Compliant with South Africa's Protection of Personal Information Act (POPIA).</p>
+                        <p><strong>Shipping & Delivery:</strong> Local pickup available. Spell oils ship nationwide with tracking updates until delivery confirmation. Results for readings are delivered in-person, online via voice/video call, and spellwork/oils include photo/video proof of casting and packaging.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FOOTER SECTION -->
+    <footer class="site-footer">
+        <div class="container footer-flex">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <div class="logo-icon-bg" style="width: 2rem; height: 2rem;">
+                    <i class="fa-solid fa-moon text-witch-gold" style="font-size: 0.75rem;"></i>
+                </div>
+                <span style="font-family: var(--font-serif); font-weight: 700; color: #e2e8f0; font-size: 1rem;">Mystic Haven</span>
+            </div>
+            <!-- Footer Socials -->
+            <div style="display: flex; align-items: center; gap: 1rem; font-size: 1rem;">
+                <a href="https://tr.ee/vb8ZVpxIJ_" target="_blank" style="color: inherit; text-decoration: none;" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://tr.ee/nnQXEviwOc" target="_blank" style="color: inherit; text-decoration: none;" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://tr.ee/_b7haSmW_g" target="_blank" style="color: inherit; text-decoration: none;" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://wa.me/27840530859" target="_blank" style="color: inherit; text-decoration: none;" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <div style="text-align: center; font-size: 0.6875rem;">
+                <p>  Mystic Haven - All Rights Reserved.</p>
+                <p style="color: var(--color-text-dim); margin-top: 0.125rem;">Spiritual products intended for spiritual & ritual usage.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SHOPPING CART MODAL SLIDE-OUT -->
+    <div id="cart-modal" class="cart-modal hidden">
+        <div class="cart-drawer">
+            <div>
+                <div style="display: flex; align-items: center; justify-content: space-between; padding-bottom: 1rem; border-bottom: 1px solid #1e293b;">
+                    <h3 style="font-family: var(--font-serif); font-weight: 700; font-size: 1.125rem; color: rgb(200, 200, 200); display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fa-solid fa-bag-shopping" style="color: var(--color-witch-gold);"></i> Your Shopping Bag
+                    </h3>
+                    <button onclick="toggleCartModal()" style="background: none; border: none; color: var(--color-text-muted); font-size: 1.125rem; cursor: pointer;">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div id="cart-items-container" style="padding-top: 1rem; padding-bottom: 1rem; display: flex; flex-direction: column; gap: 0.75rem; overflow-y: auto; max-height: 60vh;">
+                    <p style="font-size: 0.75rem; color: var(--color-text-muted); text-align: center; padding: 2rem 0; font-weight: 300;">Your bag is currently empty.</p>
+                </div>
+            </div>
+            <div style="border-top: 1px solid #1e293b; padding-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.875rem; font-weight: 600;">
+                    <span style="color: #cbd5e1;">Total (Including SA Delivery):</span>
+                    <span id="cart-total" style="font-family: var(--font-serif); color: #fde047; font-size: 1.125rem;">R0</span>
+                </div>
+                <button onclick="checkoutWhatsApp()" class="btn-whatsapp" style="justify-content: center; width: 100%; padding: 0.75rem; font-size: 0.75rem; text-transform: uppercase;">
+                    <i class="fa-brands fa-whatsapp" style="font-size: 1rem;"></i> Checkout via WhatsApp
+                </button>
+                <p style="font-size: 0.625rem; color: var(--color-text-dim); text-align: center;">Orders processed instantly on WhatsApp for payment & shipping details.</p>
+            </div>
+        </div>
+    </div>
+
+  
+  <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/27840530859?text=Hi%20The%20Guided%20Witch,%20I'd%20like%20to%20inquire%20about%20your%20services" target="_blank" class="floating-wa-btn" title="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp" style="font-size: 1.5rem;"></i>
+    </a>
+    
+    <!-- JAVASCRIPT LOGIC -->
+    <script src="/mystic-javascript/mystic.js"></script>
+    <script src="/mystic-javascript/carousel-effect.js"></script>
+
+</body>
+
+</html>
