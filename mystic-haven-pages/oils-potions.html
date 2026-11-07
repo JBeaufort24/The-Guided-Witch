@@ -392,10 +392,19 @@
                     <span style="color: #cbd5e1;">Total (Including SA Delivery):</span>
                     <span id="cart-total" style="font-family: var(--font-serif); color: #fde047; font-size: 1.125rem;">R0</span>
                 </div>
+            
+                <!-- Existing WhatsApp Checkout Button -->
                 <button onclick="checkoutWhatsApp()" class="btn-whatsapp" style="justify-content: center; width: 100%; padding: 0.75rem; font-size: 0.75rem; text-transform: uppercase;">
-                    <i class="fa-brands fa-whatsapp" style="font-size: 1rem;"></i> Checkout via WhatsApp
+                    <i class="fa-brands fa-whatsapp" style="font-size: 1rem;"></i>
+                    Checkout via WhatsApp
                 </button>
-                <p style="font-size: 0.625rem; color: var(--color-text-dim); text-align: center;">Orders processed instantly on WhatsApp for payment & shipping details.</p>
+            
+                <!-- NEW: PayPal & Card Payment Container -->
+                <div id="paypal-button-container"></div>
+            
+                <p style="font-size: 0.625rem; color: var(--color-text-dim); text-align: center;">
+                    Orders processed instantly via WhatsApp or secure online payment.
+                </p>
             </div>
         </div>
     </div>
@@ -409,7 +418,7 @@
     <!-- JAVASCRIPT LOGIC -->
     <script src="/mystic-javascript/mystic.js"></script>
     <script src="/mystic-javascript/carousel-effect.js"></script>
-
+    <script src="/mystic-javascript/mystic-payment.js"></script>
 
 </body>
 
