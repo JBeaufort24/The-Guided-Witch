@@ -743,14 +743,14 @@
             font-size: 0.875rem;
             font-family: var(--font-serif);
             font-weight: 600;
-            color: var(--color-text-muted);
+            color: var(--color-text-white);
             border-bottom: 2px solid transparent;
             cursor: pointer;
             transition: var(--transition-standard);
         }
         .tab-btn:hover { color: var(--color-text-white); }
         .tab-btn.active {
-            color: var(--color-witch-gold);
+            color: var(--color-text-main);
             border-bottom-color: var(--color-witch-gold-light);
         }
 
